@@ -5,7 +5,7 @@ from rembg import remove
 from PIL import Image
 import openai
 
-TOKEN = os.getenv("8567204232:AAFhm8X1TG2iVJHAHbdNssHWr465lT1-f7A")
+TOKEN = os.getenv("8222329548:AAHU1S0samdiNvDtT3B4I64SMU6lEKDQ8zA")
 OPENAI_KEY = os.getenv("k-proj-xLfv8aT4JJHJ5QV0mYt9wWuhR1KTAdyJZeF0m54YCSV7k5aLjBhhvCx947mVBqEwYXF-KRI8jmT3BlbkFJ11sdK-l32plJHLw-kuGCFOrW09GfatSbhLlNFq3uBHDcJAF3zi94GuUlNEXBDULI0l_VpruhQA")
 openai.api_key = OPENAI_KEY
 
@@ -36,5 +36,6 @@ app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, chat))
 app.add_handler(MessageHandler(filters.PHOTO, photo))
+
 
 app.run_polling()

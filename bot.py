@@ -1,4 +1,4 @@
-import os
+import os 
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, ContextTypes, filters
 from rembg import remove
@@ -39,3 +39,4 @@ app.add_handler(MessageHandler(filters.PHOTO, photo))
 
 
 app.run_polling()
+
